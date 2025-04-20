@@ -1,0 +1,219 @@
+/* ===== General Styles ===== */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    color: #2d3436;
+}
+
+h1 {
+    text-align: center;
+    color: #2d3436;
+    margin: 30px 0;
+    font-size: 2.8rem;
+    font-weight: 600;
+    position: relative;
+}
+
+h1::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(to right, #6c5ce7, #00cec9);
+    margin: 15px auto;
+    border-radius: 2px;
+}
+
+/* ===== Navigation ===== */
+header.nav {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    background: linear-gradient(135deg, #6c5ce7, #00cec9);
+    padding: 18px 0;
+    box-shadow: 0 4px 12px rgba(108, 92, 231, 0.2);
+}
+
+header.nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+
+header.nav a:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Main Content ===== */
+main.content {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* ===== Table Styling ===== */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 30px 0;
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+td, th {
+    border: 1px solid #e0e0e0;
+    padding: 18px;
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+tr:hover {
+    background-color: #f1f9ff;
+}
+
+.center-title {
+    text-align: center;
+    font-weight: 700;
+    background: linear-gradient(135deg, #6c5ce7, #00cec9);
+    color: white;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* ===== Image Styling ===== */
+.biodata-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    border: 6px solid #f1f1f1;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+}
+
+.biodata-img:hover {
+    transform: scale(1.05);
+    border-color: #6c5ce7;
+    box-shadow: 0 10px 25px rgba(108, 92, 231, 0.3);
+}
+
+/* ===== Social Media Links ===== */
+a[target="_blank"] {
+    color: #6c5ce7;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+a[target="_blank"]:hover {
+    color: #fff;
+    background-color: #6c5ce7;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(108, 92, 231, 0.2);
+}
+
+/* ===== Programming Skills ===== */
+ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+ul li {
+    background: linear-gradient(135deg, #6c5ce7, #00cec9);
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    box-shadow: 0 4px 8px rgba(108, 92, 231, 0.1);
+}
+
+/* ===== Footer ===== */
+footer {
+    text-align: center;
+    margin-top: 60px;
+    padding: 30px;
+    background: linear-gradient(135deg, #6c5ce7, #00cec9);
+    color: white;
+}
+
+.footer-text {
+    font-size: 1rem;
+    margin: 0;
+    letter-spacing: 0.8px;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+    header.nav {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 15px;
+    }
+    
+    header.nav a {
+        padding: 8px 15px;
+        font-size: 1rem;
+    }
+    
+    main.content {
+        padding: 25px;
+        margin: 20px auto;
+    }
+    
+    h1 {
+        font-size: 2.2rem;
+    }
+    
+    .biodata-img {
+        width: 140px;
+        height: 140px;
+    }
+}
+
+@media (max-width: 480px) {
+    header.nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .biodata-img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    td, th {
+        padding: 12px;
+    }
+    
+    ul li {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+    }
+}

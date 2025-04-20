@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Life</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Campus Life Specific Styles */
+        .campuslife-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .campuslife-title {
+            text-align: center;
+            color: #2d3436;
+            margin-bottom: 2.5rem;
+            font-size: 2.5rem;
+            position: relative;
+        }
+        
+        .campuslife-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, #6c5ce7, #00cec9);
+            margin: 15px auto;
+            border-radius: 2px;
+        }
+        
+        .campuslife-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 1rem;
+        }
+        
+        .campus-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .campus-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        .campus-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+            border-bottom: 3px solid #f1f1f1;
+        }
+        
+        .campus-card h3 {
+            color: #2d3436;
+            padding: 1rem 1rem 0.5rem;
+            margin: 0;
+            font-size: 1.3rem;
+        }
+        
+        .campus-card p {
+            color: #636e72;
+            padding: 0 1rem 1.5rem;
+            margin: 0;
+            line-height: 1.5;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .campuslife-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .campus-img {
+                height: 180px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .campuslife-title {
+                font-size: 2rem;
+            }
+            
+            .campus-img {
+                height: 160px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="nav">
+        <a href="index.html">Biodata</a>
+        <a href="hobby.html">Hobbies</a>
+        <a href="campuslife.html">Campus Life</a>
+    </header>
+    
+    <main class="campuslife-container">
+        <h1 class="campuslife-title">My Campus Life</h1>
+        
+        <div class="campuslife-grid">
+            <div class="campus-card">
+                <img src="kawan.jpg" alt="With friends after final exam" class="campus-img">
+                <h3>With Beloved Friends</h3>
+                <p>Me and my friends taking a picture after final exam.</p>
+            </div>
+            
+            <div class="campus-card">
+                <img src="jogging.jpg" alt="Jogging with friends" class="campus-img">
+                <h3>Jogging Session</h3>
+                <p>One of my routines to stay healthy and active with friends.</p>
+            </div>
+            
+            <div class="campus-card">
+                <img src="gym.jpg" alt="Working out at Taman U Gym" class="campus-img">
+                <h3>Gym With Mates</h3>
+                <p>Regular workout sessions at Taman U Gym to stay fit.</p>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p class="footer-text">© 2025 Atef. All rights reserved.</p>
+    </footer>
+</body>
+</html>
